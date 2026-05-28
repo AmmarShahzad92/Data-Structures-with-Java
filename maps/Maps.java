@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
-public class MapExample {
+public class Maps {
     public static void main(String[] args) {
         Map<String, Integer> scores = new HashMap<>();
 

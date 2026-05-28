@@ -1,6 +1,6 @@
 import java.util.Vector;
 
-public class Vector {
+public class Vectors {
     public static void main(String[] args) {
         Vector<Integer> numbers = new Vector<>();
 
