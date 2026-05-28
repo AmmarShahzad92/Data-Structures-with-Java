@@ -1,11 +1,11 @@
 import java.util.Scanner;
 
-public class heap {
+class Heap {
 	private int[] data;
 	private int size;
 	private int maxheap;
 	final int front = 1;
-	public heap(int maxheap) {
+	public Heap(int maxheap) {
 		this.maxheap = maxheap;
 		this.size = 0;
 		this.data = new int[this.maxheap+1];
@@ -62,12 +62,12 @@ public class heap {
 	
 	
 	public void insertNode(int Data) {
-		if (size>= size) {
+		if (size>= maxheap) {
 		return;
 		}
 		data[++size] = Data;
 		int current = size;
-		while (data[current] <data[getParentPosition(current)]) {
+		while (current>1 && data[current] <data[getParentPosition(current)]) {
 		swap(current, getParentPosition(current));
 		current = getParentPosition(current);
 		}
@@ -105,7 +105,7 @@ public class MaxHeap{
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the size of Min Heap");
 		heapSize = sc.nextInt();
-		heap heapObj = new heap(heapSize);
+		Heap heapObj = new Heap(heapSize);
 		for(int i = 1; i<= heapSize; i++) {
 		System.out.print("Enter "+i+" element: ");
 		int data = sc.nextInt();
